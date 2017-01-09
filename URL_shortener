@@ -1,0 +1,27 @@
+import ulrparse
+
+duplicate_counter = 0
+domain_name = urlparse.urlparse(self.request.path).netloc
+shortened_domain_dict = {}
+input_url = raw_input('What is the URL you would like to shorten:')
+domain_to_shorten = string(urlparse.urlparse(input_url).netloc)
+
+for index in range(len(domain_to_shorten):
+    if index == 0:
+        newstring = ""
+    if domain_to_shorten[index] != '.':
+        newstring = newstring + domain_to_shorten[index]
+        
+if len(newstring) <= 4:
+    if newstring not in shortened_domain_dict:
+        shortened_domain_dict[newstring] = input_url
+    else:
+        shortened_domain_dict[newstring + str(duplicate_counter)] = input_url
+        duplicate_counter += 1
+else:
+    newstring[0:4] = short_newstring
+    if short_newstring not in shortened_domain_dict:
+        shortened_domain_dict[short_newstring] = input url
+    else:
+        shortened_domain_dict[short_newstring+str(duplicate_counter)] = input_url
+        duplicate_counter += 1
